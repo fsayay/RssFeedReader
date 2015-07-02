@@ -69,8 +69,7 @@ public class RSSFeedParser {
       while (eventReader.hasNext()) {
         XMLEvent event = eventReader.nextEvent();
         if (event.isStartElement()) {
-          String localPart = event.asStartElement().getName()
-              .getLocalPart();
+          String localPart = event.asStartElement().getName().getLocalPart();
           switch (localPart) {
           case ITEM:
             if (isFeedHeader) {
@@ -126,20 +125,20 @@ public class RSSFeedParser {
   }
 
   private String getCharacterData(XMLEvent event, XMLEventReader eventReader)
-      throws XMLStreamException {
-    String result = "";
-    event = eventReader.nextEvent();
-    if (event instanceof Characters) {
-      result = event.asCharacters().getData();
+    throws XMLStreamException {
+        String result = "";
+        event = eventReader.nextEvent();
+        if (event instanceof Characters) {
+            result = event.asCharacters().getData();
+        }
+        return result;
     }
-    return result;
-  }
 
-  private InputStream read() {
-    try {
-      return url.openStream();
-    } catch (IOException e) {
-      throw new RuntimeException(e);
+    private InputStream read() {
+        try {
+            return url.openStream();
+        } catch (IOException e) {
+        throw new RuntimeException(e);
+        }
     }
-  }
 }
