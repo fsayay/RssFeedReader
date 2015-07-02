@@ -1,4 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Oswald');
 
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+    
+  margin: 0;
+  /*background: -webkit-linear-gradient(top, #f0f9ff 57%,#cbebff 99%);*/
+    background-image:  url('../img/paisaje1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #fff;
+    overflow: hidden
+
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
 figure {
   margin: 1em 40px;
 }
@@ -986,16 +1082,12 @@ html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
-/*********************************************************************************************************/
 body {
   font-family: Oswald;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  /*background-color: #ffffff;*/
-  /*background-color: #FFE4B5;*/
-  background-color: #FFFACD;
+  background-color: #ffffff;
 }
 input,
 button,
@@ -1179,6 +1271,7 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
+  font-weight: 500;
 }
 h3,
 .h3 {
@@ -1379,6 +1472,9 @@ blockquote {
   margin: 0 0 20px;
   font-size: 17.5px;
   border-left: 5px solid #eeeeee;
+  background-color: rgba(255,255,255,0.3);
+  color: #f8f8f8;
+  text-shadow: 2px 2px 4px #333333
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -1497,7 +1593,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 970px;
+    width: 1170px;
   }
 }
 .container-fluid {
@@ -4061,17 +4157,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-radius: 0;
   }
 }
-.navbar-fixed-top {
+/*.navbar-fixed-top {
   top: 0;
   border-width: 0 0 1px;
+  text-shadow: 0.5px 0px 4px #777777;
 }
-/*
 .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0;
   border-width: 1px 0 0;
-}
-*/
+  text-shadow: 0.5px 0px 4px #777777;
+}*/
 .navbar-brand {
   float: left;
   padding: 15px 15px;
@@ -4257,14 +4353,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-
 /*
 .navbar-btn {
   margin-top: 8px;
-  margin-bottom: 0px;
-
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  margin-bottom: 8px;
 }
 */
 .navbar-btn.btn-sm {
@@ -4293,21 +4385,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-right {
     float: right !important;
     margin-right: -15px;
-    height: 40px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
   }
 }
-  
-/***********************  Color de borde inferior    ********************************/
-
-.navbar-default {
-  background-color: #C0C0C0;
-  border-color: #eeeeee;
-  border-bottom:3px solid gray;
-}
 /*
+.navbar-default {
+
+  background-color: rgba(255,255,255,0.65);
+  border-color: #eeeeee;
+}
+*/
 .navbar-default .navbar-brand {
   color: #333333;
 }
@@ -4316,13 +4405,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #1a1a1a;
   background-color: transparent;
 }
-*/
-/*********************  Cambiar color del menu  ************************************/
 /*
 .navbar-default .navbar-text {
-  color: #FFFFE0;
-}*/
-
+  color: #333333;
+}
+*/
 .navbar-default .navbar-nav > li > a {
   color: #333333;
 }
@@ -4394,17 +4481,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #333333;
 }
 .navbar-default .btn-link {
-  color:#FFFFFF;
-  text-decoration: none;
-}
-*/
-
-/*
-.navbar-default .btn-link:hover,
-.navbar-default .btn-link:focus {
   color: #333333;
 }*/
 
+.navbar-default .btn-link:hover,
+.navbar-default .btn-link:focus {
+  color: #333333;
+  text-decoration: none;
+
+}
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,
 .navbar-default .btn-link[disabled]:focus,
@@ -5667,11 +5752,9 @@ button.close {
   width: auto;
   margin: 10px;
 }
-
-/*******************************************************************************************************/
 .modal-content {
   position: relative;
-  /*background-color: #ffffff;*/
+  background-color: #ffffff;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -5679,10 +5762,6 @@ button.close {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0;
-
-  /*background-color: #ffffff;*/
-  background-color: #C0C0C0;
-  /*background-color: #5f5f5f;*/
 }
 .modal-backdrop {
   position: fixed;
@@ -5705,7 +5784,6 @@ button.close {
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
   min-height: 16.42857143px;
-  background-color: #A9A9A9;
 }
 .modal-header .close {
   margin-top: -2px;
@@ -5745,12 +5823,9 @@ button.close {
     width: 600px;
     margin: 30px auto;
   }
-  /**********************************************************************************/
   .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-
-    color: #B22222;
   }
   .modal-sm {
     width: 300px;
@@ -5985,18 +6060,8 @@ button.close {
   border-left-color: #ffffff;
   bottom: -10px;
 }
-
-/*************************************************************************************/
 .carousel {
   position: relative;
-  border-style: solid;
-  border-width: 5px; 
-
-  -webkit-border-top-left-radius:0px;
-  -webkit-border-top-right-radius:10px;
-  -webkit-border-bottom-left-radius:10px;
-  -webkit-border-bottom-right-radius:0px;
- 
 }
 .carousel-inner {
   position: relative;
@@ -6554,7 +6619,7 @@ body {
 }
 .section {
   position: relative;
-  padding: 50px 0;
+  padding: 100px 0;
 }
 .section .background-image {
   z-index: 0;
