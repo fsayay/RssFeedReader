@@ -1,2 +1,0 @@
-# RssFeedReader
-Lector rss
